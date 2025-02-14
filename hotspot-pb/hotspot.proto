@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package api.v1;
+option go_package = "./";
+
+service HotspotService {
+  rpc GetHotspots(HotspotRequest) returns (HotspotResponse);
+}
+
+message HotspotRequest {
+  // 版本号
+  string id = 1;
+}
+
+message HotspotResponse {
+  repeated HotspotItem items = 1;
+}
+
+message HotspotItem {
+  string title = 1;
+  string content = 2;
+  string url = 3;
+}
