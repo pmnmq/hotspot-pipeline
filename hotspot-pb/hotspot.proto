@@ -21,3 +21,21 @@ message HotspotItem {
   string content = 2;
   string url = 3;
 }
+
+message FeedItem {
+  string title = 1;
+  string link = 2;
+  string summary = 3;
+  string content = 4;
+  string cover = 5;
+  string publish_at = 6;
+}
+
+message FeedMessage {
+  string id = 1;
+  string url = 2;
+  string title = 3;
+  string subtitle = 4;
+  string update_at = 5;
+  repeated FeedItem data = 6;
+}
